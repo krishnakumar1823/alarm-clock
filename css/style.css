@@ -1,0 +1,73 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+} 
+.row{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+.clk-row{
+	background:linear-gradient(#000000b3,#000000cf), url('../image/3.jpg');
+	background-size:cover;
+	border-radius:8px;
+	position:relative;
+}
+.stle{
+	color:red;
+	font-size:20px;
+	font-weight:bolder;
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
+}
+.clk-row::before{
+	content:"";
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:red;
+	height:6px;
+	width:100px;
+	animation-name:animi;
+	animation-duration:3s;
+	animation-delay:.1s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate-reverse;
+	transition:all .7s ease;
+}
+.clk-row::after{
+	content:"";
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	background-color:red;
+	height:6px;
+	width:100px;
+	animation-name:animi1;
+	animation-duration:3s;
+	animation-delay:.1s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate-reverse;
+	transition:all .7s ease;
+}
+@keyframes animi1{
+		0%{
+			transform:translatex(560px);
+		}
+		100%{
+			transform:translatex(0px);
+		}
+	}
+
+.setAlarm{
+	background-color: white;
+	color: red;
+	border-radius: 12px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.setAlarm:hover{
+	background-color: red;
+	color: white;
+}
